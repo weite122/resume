@@ -48,14 +48,10 @@ aside h1{
     font-size: 30px;
     text-align: center;
     margin: 35px 0;
-    /* animation: flip 1s; */
-    
-
 }
 
 aside h1  a{
     display: block;
-    
 }
 
 aside .nav li{
@@ -178,9 +174,7 @@ aside .icon li:hover{
     border-radius: 4px;
     color: #B0D139; 
 }
-.aside-info .download a:hover{
-    animation: jello 1s;
-}
+
 @media screen and (max-width: 768px){
     aside .aside-info{
         display: none;
@@ -294,10 +288,7 @@ section{
     
 }
 /* portfolio */
-.portfolio{
-    /* background: url(./images/bg4.jpg) no-repeat;
-    background-size: cover; */
-}
+
 .portfolio .item{
     max-width: 600px;
     margin: 40px auto;
@@ -354,30 +345,7 @@ section{
         margin-right: .1em;
     }
 }
-.icon-weather{
-    fill: darkviolet;
-}
-.icon-js{
-    fill: #a5a7aa;
-}
-.icon-music{
-    fill: rgb(212,60,51);
-}
-.icon-jquery{
-    fill: rgb(8,103,78);
-}
-.icon-react{
-    fill: rgb(100,218,249);
-}
-.icon-canvas{
-    fill: darkmagenta;
-}
-.icon-load{
-    fill: tomato;
-}
-.icon-git{
-    fill: rgb(225,101,49);
-}
+
 .github{
     float: right;
     margin-right: 10px;
