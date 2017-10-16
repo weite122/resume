@@ -317,6 +317,11 @@ section{
 .portfolio .item .describe p{
     padding-top: 20px;
 }
+.portfolio .item .describe ol li{
+    list-style: inherit;
+    margin-left: 1em;
+}
+
 .portfolio .item .link{
     padding: 20px;
     text-align: right;

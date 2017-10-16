@@ -78,8 +78,11 @@
                         网站中的图片和歌曲都存储在七牛云上,歌词用JSON形式存储,所有数据通过AJAX加载,避免API抽风无法加载数据的问题.
                         长度单位尽量使用vw,保证适应多种尺寸的屏幕.代码使用面向对象思想封装函数,用webpack进行压缩打包.                        
                      </p>
-                     <p><strong>技术栈</strong>：HTML、CSS、JQuery、JavaScript、Ajax、ES6、webpack
-                     </p>
+                     <p><strong>技术栈</strong>：HTML、CSS、JQuery、JavaScript、Ajax、ES6、webpack</p>
+                     <ol><strong>项目难点:</strong>
+                        <li>当输入关键字搜索时会一直向后台请求数据,使用节流函数防止请求过多.</li>
+                        <li>用JSON数据模拟后台,该数据包括图片,歌词,音乐,介绍用正则表达式匹配后台数据,加载到页面上.</li>
+                    </ol>
                  </div>
                  <div class="link">
                      <div class="link-item">
@@ -96,7 +99,10 @@
                  <div class="describe">
                      <p>todolist基于react框架实现,以Leancloud为部署,具有注册、登录、通过邮箱找回密码,通过建立待办事项进行任务管理.</p>
                      <p><strong>技术栈</strong>：React、Webpack、Leancloud、JavaScript、CSS</p> 
-                     
+                     <ol><strong>项目难点:</strong>
+                        <li>使用leanCloud部署后台,登录注册以及账户信息都使用leanCloud提供的API.</li>
+                        <li>React 框架的使用.根据props传值,setState改变状态,各组件的状态更新管理.</li>
+                    </ol>
                  </div>
                  <div class="link">
                      <div class="link-item">
@@ -116,6 +122,10 @@
                          </p>
                      <p>由于使用天气API偶尔不稳定，可能出现数据获取不到情况,情谅解。</p>
                      <p><strong>技术栈</strong>：JQuery、AJAX、ES6、Webpack、HTML、SCSS、JavaScript</p>
+                     <ol><strong>项目难点:</strong>
+                        <li>本页面的UI是借鉴于Dribble.com的,为了尽可能还原该UI的图标,使用正则表达式进行查找数据,在通过对应的JSON数据进行替换.</li>
+                        <li>天气API的查找 一开始不支持汉字,但通过函数进行拼音与汉字替换实现.</li>
+                    </ol>
                  </div>
                  <div class="link">
                      <div class="link-item">
@@ -129,9 +139,14 @@
                  <h3>在线搜索图片</h3>
                  <a href="https://weite122.github.io/Search-Image/index.html" target="_blank"><img src="https://i.loli.net/2017/10/10/59dbb88e42158.png" alt=""></a>
                  <div class="describe">
-                     <p>在线搜索图片实现以下功能:在顶部搜索框输入关键词，键入enter可触发搜索,点击x可以重置输入内容;滚动条到顶部自动加载部分图片,直至加载完毕;点击图片会弹出新的网页,网页有图片的所有相关信息,可以下载原图.                     </p>
+                     <p>在线搜索图片实现以下功能:在顶部搜索框输入关键词，键入enter可触发搜索,点击x可以重置输入内容;滚动条到顶部自动加载部分图片,直至加载完毕;点击图片会弹出新的网页,网页有图片的所有相关信息,可以下载原图.</p>
                      <p>代码使用面向对象思想封装函数,AJAX+promise获取数据避免回调地狱,发布订阅模式封装代码可以让其他人放心调用</p>
                      <p><strong>技术栈</strong>：HTML, SCSS, 原生JavaScript, Ajax,ES6,面向对象,发布订阅模式,promise</p>
+                     <ol><strong>项目难点:</strong>
+                        <li>当改变页面大小或输入关键字搜索图片时,页面一直会向服务器发送AJAX请求,通过使用节流函数限制请求的次数,当改变页面大小或输入关键字的300毫秒内不发送请求,当用户停止缩放页面或停止输入的300毫秒后才发送请求,提升网页性能.</li>   
+                        <li>判断页面是否滚动到底部,通过判断页面滚动的距离+页面高度是否大于页面到底部的实际距离,不用埋入一个隐藏的节点去判断.</li>
+                        <li>当页面加载的图片过多导致浏览器有滚动条,而计算页面宽度时会将滚动条宽度排除在外,导致实际的宽度小于一行图片的宽度,木桶布局就会出现错乱.当第一次加载图片时使用实际的宽度,之后缩放页面时设置高度减去滚动条的宽度.</li>
+                    </ol>
                  </div>
                  <div class="link">
                      <div class="link-item">
